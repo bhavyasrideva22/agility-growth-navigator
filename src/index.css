@@ -1,3 +1,4 @@
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -97,5 +98,57 @@
 
   body {
     @apply bg-background text-foreground;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen,
+      Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  }
+}
+
+@layer components {
+  .question-card {
+    @apply p-6 rounded-lg bg-white shadow-lg transition-all duration-300 max-w-3xl w-full mx-auto;
+  }
+
+  .likert-scale {
+    @apply grid grid-cols-5 gap-2 my-4;
+  }
+
+  .likert-option {
+    @apply flex flex-col items-center justify-center p-3 rounded-md transition-all duration-200 cursor-pointer;
+  }
+
+  .likert-option.selected {
+    @apply bg-light-purple/20 border-2 border-light-purple;
+  }
+
+  .progress-bar {
+    @apply h-2 bg-gray-200 rounded-full overflow-hidden;
+  }
+
+  .progress-bar-fill {
+    @apply h-full bg-gradient-to-r from-light-purple to-teal transition-all duration-500;
+  }
+
+  .radar-chart-container {
+    @apply w-full max-w-md mx-auto;
+  }
+
+  .badge {
+    @apply px-3 py-1 text-sm rounded-full font-medium inline-flex items-center gap-1;
+  }
+
+  .badge-primary {
+    @apply bg-light-purple/20 text-light-purple;
+  }
+
+  .badge-secondary {
+    @apply bg-teal/20 text-teal;
+  }
+
+  .badge-tertiary {
+    @apply bg-coral/20 text-coral;
+  }
+
+  .hover-scale {
+    @apply transition-transform duration-200 hover:scale-105;
   }
 }
